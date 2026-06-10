@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-
 import { ThemeSwitch } from "./components/theme-switch";
+import FaqItem from "./components/faq-item";
+import NotificationPanel from "./components/notification-panel";
 
 function App() {
   return (
@@ -13,10 +14,12 @@ function App() {
       <main className="flex flex-col h-screen items-center justify-center bg-base-200">
         <section>
           <h2>Component 1: FAQ Item</h2>
+          <FaqItem />
         </section>
 
         <section>
           <h2>Component 2: Notification Panel</h2>
+          <NotificationPanel />
         </section>
 
         <section>

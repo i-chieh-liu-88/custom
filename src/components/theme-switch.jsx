@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function ThemeSwitch() {
+export default function ThemeSwitch() {
   const [isDark, setIsDark] = useState(false);
 
   function toggle() {
@@ -10,7 +10,14 @@ export function ThemeSwitch() {
   return (
     <>
       <div>
-        <button onClick={toggle}>Change Mode</button>
+        <button className="btn btn-soft btn-info" Info onClick={toggle}>
+          Change Mode
+        </button>
+
+        <span>
+          Current Selection:{" "}
+          <strong>{isDark ? "🌙 Dark Mode" : "☀️ Light Mode"}</strong>
+        </span>
       </div>
     </>
   );
